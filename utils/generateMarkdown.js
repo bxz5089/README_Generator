@@ -29,36 +29,61 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  var licenseLink = renderLicenseLink(data.license);
-  if (licenseLink == 'None') {
-    return ''
-  }
+  let licenseLink = renderLicenseLink(data.license);
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  var licenseBadge = renderLicenseBadge(data.license);
+  let licenseBadge = renderLicenseBadge(data.license);
+  let licenseLink = renderLicenseLink(data.license);
   
  
   return `# ${data.title}
+          ${licenseBadge}
+          ---
+          ## Description
+          
+          ${data.description}    
+          
+          ---
+          ## Table of Contents
+          
+          - [Installation](##Installation)
+          
+          - [Usage](##Usage)
+          
+          - [License](##License) 
+          
+          - [Contributions](##Contributing)
 
-  ${licenseBadge}
-
-  ---
-  ## Description
+          - [Tests](##Tests)
   
-  ${data.description}
+          - [Questions](##Questions)
 
-  ---
-  ## Installation
-  
-  ${data.install}
+          ---
+          ## Installation
+          
+          ${data.install}
 
-  
+          ---
+          ## Usage
+          
+          ${data.usage}
+
+          ${licenseLink}
+
+          ---
+          ## Contributing
+          
+          ${data.contribute}
+
+          ---
+          ## Questions
+          
+          If you have any questions or concerns please contact me at ${data.email} or any of my contact information above. [Back to Author](##Author)
 
 
-
-`;
+    `;
 }
 
 module.exports = generateMarkdown;
