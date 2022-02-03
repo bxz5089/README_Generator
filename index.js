@@ -7,17 +7,23 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = [
     {
         type: 'input',
-        message: 'What is the project title?',
+        message: 'What is your project title?',
         name: 'title',
     },
     {
+        type: 'list',
+        message: 'What licenses would you like to use?',
+        name: 'license',
+        choices: ['MIT', 'Apache 2.0', 'None']
+    },
+    {
         type: 'input',
-        message: 'What is the project description?',
+        message: 'What is your project description?',
         name: 'description',
     },
     {
         type: 'input',
-        message: 'What is the project installation process?',
+        message: 'What is your project installation process?',
         name: 'install',
     },
 ];
