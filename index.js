@@ -11,6 +11,16 @@ const questions = [
         name: 'title',
     },
     {
+        type: 'input',
+        message: 'What is your GitHub username?',
+        name: 'username',
+    },
+    {
+        type: 'input',
+        message: 'What is your email?',
+        name: 'email',
+    },
+    {
         type: 'list',
         message: 'What licenses would you like to use?',
         name: 'license',
@@ -25,6 +35,16 @@ const questions = [
         type: 'input',
         message: 'What is your project installation process?',
         name: 'install',
+    },
+    {
+        type: 'input',
+        message: 'What is the usage of your project?',
+        name: 'usage',
+    },
+    {
+        type: 'input',
+        message: 'How to test your project?',
+        name: 'test',
     },
 ];
 

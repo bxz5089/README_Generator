@@ -29,7 +29,12 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  let licenseLink = renderLicenseLink(data.license);
+  if(license == 'None'){
+    return ''
+  } else {
+    return`## License 
+    This application uses ${license} license `
+  }
 }
 
 // TODO: Create a function to generate markdown for README
@@ -39,51 +44,49 @@ function generateMarkdown(data) {
   
  
   return `# ${data.title}
-          ${licenseBadge}
-          ---
-          ## Description
-          
-          ${data.description}    
-          
-          ---
-          ## Table of Contents
-          
-          - [Installation](##Installation)
-          
-          - [Usage](##Usage)
-          
-          - [License](##License) 
-          
-          - [Contributions](##Contributing)
 
-          - [Tests](##Tests)
-  
-          - [Questions](##Questions)
+${licenseBadge}
 
-          ---
-          ## Installation
-          
-          ${data.install}
+---
+## Description
 
-          ---
-          ## Usage
-          
-          ${data.usage}
+${data.description}    
 
-          ${licenseLink}
+---
+## Table of Contents
 
-          ---
-          ## Contributing
-          
-          ${data.contribute}
+- [Installation](##Installation)
 
-          ---
-          ## Questions
-          
-          If you have any questions or concerns please contact me at ${data.email} or any of my contact information above. [Back to Author](##Author)
+- [Usage](##Usage)
 
+- [License](##License) 
 
-    `;
+- [Tests](##Tests)
+
+- [Questions](##Questions)
+
+---
+## Installation
+
+${data.install}
+
+---
+## Usage
+
+${data.usage}
+
+${licenseLink}
+
+---
+## Tests
+
+${data.test}
+
+---
+## Questions
+
+If you have any questions or concerns please contact me at ${data.email} or checkout my GitHub page at [${data.username}](https://github.com/${data.username}/).
+`;
 }
 
 module.exports = generateMarkdown;
