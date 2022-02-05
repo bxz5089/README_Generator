@@ -33,10 +33,11 @@ A command-line application that dynamically generates a professional README.md f
 
 This application can allow users to quickly and easily create a README file by using a command-line application to generate one.
 
-![alt text](assets/img/Screen1Shot1.png)
+### Screenshot:
+![alt text](assets/img/ScreenShot1.png)
 
-
-[![Watch the video]()](https://drive.google.com/file/d/1Oslm6RCPScErXn4-AufZ6xFKltaEgI30/view?usp=sharing)
+### Walkthrough Video:
+[![Watch the video](assets/img/ScreenShot2.png)](https://drive.google.com/file/d/1Oslm6RCPScErXn4-AufZ6xFKltaEgI30/view?usp=sharing)
 
 
 --- 
